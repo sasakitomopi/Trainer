@@ -12,9 +12,8 @@ class HomeModel: ObservableObject {
     @Published var text = ""
     @Published var msgs : [MsgModel] = []
     @AppStorage("current_user") var user = ""
-    
+
     let ref = Firestore.firestore()
-    
     init(){
         readAllMsgs()
     }
@@ -29,7 +28,7 @@ class HomeModel: ObservableObject {
                 print(err!.localizedDescription)
                 return
             }
-
+            
             //select data record
             guard let data = snap else {
                 return
@@ -38,13 +37,12 @@ class HomeModel: ObservableObject {
             data.documentChanges.forEach { doc in
                 if doc.type == .added {
                     let id = doc.document.documentID
-                    let user = doc.document.get("name") as! String
-                    let msg = doc.document.get("message") as! String
-                    let createdAt = doc.document.get("createAt",serverTimestampBehavior: .estimate) as! Timestamp
+                    let user = doc.document.get("user") as! String
+                    let message = doc.document.get("message") as! String
+                    let createdAt = doc.document.get("timeStamp",serverTimestampBehavior: .estimate) as! Timestamp
                     let createdDate = createdAt.dateValue()
-                    
                     DispatchQueue.main.async {
-                        self.msgs.append(MsgModel(id: id,user: user, msg:msg,timeStamp: createdDate))
+                        self.msgs.append(MsgModel(id:id ,user: user, msg: message, timeStamp: createdDate))
                     }
                 }
             }
@@ -52,14 +50,22 @@ class HomeModel: ObservableObject {
         }
     }
     
-    func writeMsg(){
-        let msg = ["user": user,"message":text,"timeStamp": FieldValue.serverTimestamp()] as [String : Any]
-        let _ = ref.collection("Msgs").addDocument(data: msg) { err in
-            if err != nil {
-                print(err!.localizedDescription)
+    func writeMsg(msg: String , user: String) {
+        let data = [
+            "message": msg,
+            "user": user,
+            "timeStamp":FieldValue.serverTimestamp(),
+        ] as [String : Any]
+
+        let ref = Firestore.firestore()
+
+        ref.collection("Msgs").addDocument(data: data) { error in
+            if let error = error {
+                print(error.localizedDescription)
                 return
             }
-            self.text = ""
+
+            print("success")
         }
     }
 }

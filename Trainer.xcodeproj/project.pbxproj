@@ -17,9 +17,11 @@
 		CE0F6F7428276F5F0051355F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F6F7328276F5F0051355F /* SearchView.swift */; };
 		CE0F6F7828276FE50051355F /* BookMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F6F7728276FE50051355F /* BookMarkView.swift */; };
 		CE0F6F7B2827702B0051355F /* ScoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F6F7A2827702B0051355F /* ScoutView.swift */; };
-		CE0F6F7E2827707B0051355F /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F6F7D2827707B0051355F /* MessageView.swift */; };
+		CE0F6F7E2827707B0051355F /* MessageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F6F7D2827707B0051355F /* MessageRow.swift */; };
 		CE0F6F81282770D50051355F /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F6F80282770D50051355F /* MyPageView.swift */; };
 		CE0F6F83282776C60051355F /* MyPageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F6F82282776C60051355F /* MyPageHeader.swift */; };
+		CE4587712830BB4E00BABFD6 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4587702830BB4E00BABFD6 /* MessageView.swift */; };
+		CE4587742830C1BC00BABFD6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4587732830C1BC00BABFD6 /* LoginView.swift */; };
 		CE96EC7C2827E992002D3A1C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE96EC7B2827E992002D3A1C /* GoogleService-Info.plist */; };
 		CEB2E6BD28279D9E005BE043 /* MyPageOrderMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2E6BC28279D9E005BE043 /* MyPageOrderMenu.swift */; };
 		CEB2E6BF2827A79A005BE043 /* MyPageTranserAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2E6BE2827A79A005BE043 /* MyPageTranserAmount.swift */; };
@@ -37,9 +39,11 @@
 		CE0F6F7328276F5F0051355F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		CE0F6F7728276FE50051355F /* BookMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkView.swift; sourceTree = "<group>"; };
 		CE0F6F7A2827702B0051355F /* ScoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutView.swift; sourceTree = "<group>"; };
-		CE0F6F7D2827707B0051355F /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		CE0F6F7D2827707B0051355F /* MessageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRow.swift; sourceTree = "<group>"; };
 		CE0F6F80282770D50051355F /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		CE0F6F82282776C60051355F /* MyPageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageHeader.swift; sourceTree = "<group>"; };
+		CE4587702830BB4E00BABFD6 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		CE4587732830C1BC00BABFD6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CE96EC7B2827E992002D3A1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEB2E6BC28279D9E005BE043 /* MyPageOrderMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageOrderMenu.swift; sourceTree = "<group>"; };
 		CEB2E6BE2827A79A005BE043 /* MyPageTranserAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTranserAmount.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 		CE0F6F64282767A40051355F /* Trainer */ = {
 			isa = PBXGroup;
 			children = (
+				CE4587722830C19B00BABFD6 /* Login */,
 				CE0F6F7F282770C20051355F /* MyPage */,
 				CE0F6F7C282770660051355F /* Message */,
 				CE0F6F792827700E0051355F /* Scout */,
@@ -131,7 +136,8 @@
 		CE0F6F7C282770660051355F /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				CE0F6F7D2827707B0051355F /* MessageView.swift */,
+				CE0F6F7D2827707B0051355F /* MessageRow.swift */,
+				CE4587702830BB4E00BABFD6 /* MessageView.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -146,6 +152,14 @@
 				CEB2E6C02827B2E6005BE043 /* FollowClientView.swift */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		CE4587722830C19B00BABFD6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE4587732830C1BC00BABFD6 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		CEDABED7282B293D00705C4A /* Model */ = {
@@ -239,7 +253,8 @@
 				CE0F6F81282770D50051355F /* MyPageView.swift in Sources */,
 				CE0F6F83282776C60051355F /* MyPageHeader.swift in Sources */,
 				CEB2E6C12827B2E6005BE043 /* FollowClientView.swift in Sources */,
-				CE0F6F7E2827707B0051355F /* MessageView.swift in Sources */,
+				CE4587742830C1BC00BABFD6 /* LoginView.swift in Sources */,
+				CE0F6F7E2827707B0051355F /* MessageRow.swift in Sources */,
 				CE0F6F68282767A40051355F /* ContentView.swift in Sources */,
 				CEB2E6BF2827A79A005BE043 /* MyPageTranserAmount.swift in Sources */,
 				CE0F6F7428276F5F0051355F /* SearchView.swift in Sources */,
@@ -248,6 +263,7 @@
 				CEECDCE7282D277800F81702 /* HomeModel.swift in Sources */,
 				CEDABED9282B296900705C4A /* MsgModel.swift in Sources */,
 				CE0F6F7B2827702B0051355F /* ScoutView.swift in Sources */,
+				CE4587712830BB4E00BABFD6 /* MessageView.swift in Sources */,
 				CEB2E6BD28279D9E005BE043 /* MyPageOrderMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

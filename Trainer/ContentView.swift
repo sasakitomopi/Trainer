@@ -61,7 +61,7 @@ struct MainView: View{
                     }
                 }.tag(Tab.scout)
             
-            MessageView()
+            LoginView()
                 .tabItem{
                     VStack{
                         Image(systemName: "message")

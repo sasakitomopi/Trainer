@@ -14,7 +14,7 @@ struct MsgModel: Codable , Identifiable , Hashable {
     var user : String
     var msg : String
     var timeStamp : Date
-    
+
     enum CodingKeys: String,CodingKey {
         case id
         case user

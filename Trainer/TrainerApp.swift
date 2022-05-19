@@ -8,8 +8,9 @@
 import SwiftUI
 import Firebase
 
-class AppDelegate : NSObject , UIApplicationDelegate {
-    private func application(_ application : UIApplication , didFinishLaunchingOptions launchOptions : [UIApplication.LaunchOptionsKey :Any]?) -> Bool {
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
         FirebaseApp.configure()
         
         return true
